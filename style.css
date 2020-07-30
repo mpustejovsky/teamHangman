@@ -1,0 +1,54 @@
+#display-element {
+    grid-area: alph;
+    
+    background-color:red;
+}
+
+ul#guess-letter li{
+    display:inline
+}
+
+#answers {
+    grid-area: correct;
+    background-color: plum;
+}
+
+ul#correct-answer li{
+    display:inline;
+    padding-left: 20px;
+    font-size: 40px;
+}
+
+#incorrect-count{
+    grid-area: count;
+    background-color: rgb(255, 0, 55);
+}
+
+
+
+#image-area {
+    grid-area: hang;
+    height: 380px;
+    background-image: url("./img/image0.JPG");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+#hint-area{
+    grid-area: hint;
+}
+#reset-area{
+    grid-area:reset;
+}
+#container {
+    display:grid;
+    grid-template-columns: 50% 50% ;
+    grid-template-areas: 
+    "alph alph"
+    "correct correct"
+    "hang hint"
+    "hang reset"
+    "count count"
+        
+    ;
+}
