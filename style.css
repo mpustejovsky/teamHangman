@@ -1,54 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    border-top: 6px solid black;
+    box-shadow: -5px 5px 15px black, 0px 5px 15px black;
+}
+
+h1 {
+    font-size: 4rem;
+    padding: 15px;
+    text-align: center;
+    color: navy;
+}
+
+h2 {
+    color: black;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: black;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+
 #display-element {
     grid-area: alph;
-    
     background-color:red;
 }
 
+ul#guess-letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
 ul#guess-letter li{
-    display:inline
+    list-style: none;
+}
+
+ul li button {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: navy;
+    margin: 5px;
+}
+
+ul li button:hover {
+    color: white;
+    background-color: navy;
 }
 
 #answers {
+    text-align: center;
     grid-area: correct;
     background-color: plum;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 ul#correct-answer li{
     display:inline;
-    padding-left: 20px;
-    font-size: 40px;
+    padding: 20px;
+    font-size: 3.5rem;
 }
 
 #incorrect-count{
     grid-area: count;
     background-color: rgb(255, 0, 55);
+    text-align: center;
+    font-size: 1.4rem;
 }
 
-
-
 #image-area {
+    width: 400px;
     grid-area: hang;
-    height: 380px;
+    height: 400px;
     background-image: url("./img/image0.JPG");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
 }
 
 #hint-area{
+    display: flex;
+    flex-direction: column;
     grid-area: hint;
+    color: navy;
+    font-size: 1.2rem;
+    height: 150px;
 }
+
+#hint-area button {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 60px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: lightskyblue;
+}
+
 #reset-area{
     grid-area:reset;
 }
+
+#reset-area button {
+    padding: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: lightskyblue;
+}
+
 #container {
     display:grid;
-    grid-template-columns: 50% 50% ;
+    grid-template-columns: 50% 50%;
     grid-template-areas: 
-    "alph alph"
+    "alph alph"  
     "correct correct"
-    "hang hint"
-    "hang reset"
     "count count"
-        
+    "hang hint"
+    "hang reset"        
     ;
 }
