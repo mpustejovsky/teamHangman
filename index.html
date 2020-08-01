@@ -12,9 +12,14 @@
 </head>
   <body>
     <h1>Hangman</h1>
+    <!-- <h2>Use the alphabet below to guess the word.</h2>
+    <h3>If you need a clue, click the hint button!</h3> -->
     <div id="container">
+      
     <div id="display-element">
-      <ul id="guess-letter">Pick A letter</ul>
+      <h2>Use the alphabet below to guess the word.</h2>
+      <h3>If you need a clue, click the hint button!</h3>
+      <ul id="guess-letter"></ul>
     </div>
 
     <div id="answers">
@@ -24,11 +29,11 @@
     </div>
     <div id="image-area"></div>
     <div id="hint-area">
-      <button id="giveHint" onclick="showHint()">Click for Hint</button>
+      <button id="giveHint" onclick="showHint()">Hint</button>
       <div id="display-hint"></div>
     </div>
     <div id="reset-area">
-      <button id="reset" onclick="resetGame()">Click to Reset Game</button>
+      <button id="reset" onclick="resetGame()">Play Again!</button>
     </div>
   </div>
    
