@@ -142,3 +142,25 @@ ul#correct-answer li{
     "hang reset"        
     ;
 }
+
+
+
+@media (min-width: 1151px){
+    ul li button {
+        width: 40px;
+        height: 40px;}
+
+}
+
+@media (max-width: 1150px){
+    ul li button {
+        width: 30px;
+        height: 30px;}
+
+}
+@media (min-width: 1401px){
+    ul li button {
+        width: 45px;
+        height: 45px;}
+
+}
